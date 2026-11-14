@@ -3,182 +3,197 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chonk Bots</title>
-<meta name="description" content="7,999 chunky robots who refuse to panic. 10 one-of-one legendaries. On Ethereum.">
-<meta property="og:title" content="Chonk Bots">
-<meta property="og:description" content="7,999 chunky robots who refuse to panic. 10 one-of-one legendaries. On Ethereum.">
+<title>Trash Gang</title>
+<meta name="description" content="4,000 raccoons who are so tired. Burn one to wake it up. Two Awake Legendaries are hiding in the trash. On Ethereum.">
+<meta property="og:title" content="Trash Gang">
+<meta property="og:description" content="4,000 raccoons who are so tired. Burn one to wake it up. Two Awake Legendaries are hiding in the trash.">
 <meta property="og:image" content="https://chillbaras.com/og.png">
 <meta property="og:url" content="https://chillbaras.com/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Chonk Bots">
-<meta name="twitter:description" content="7,999 chunky robots who refuse to panic. 10 one-of-one legendaries. On Ethereum.">
+<meta name="twitter:title" content="Trash Gang">
+<meta name="twitter:description" content="4,000 raccoons who are so tired. Burn one to wake it up. Two Awake Legendaries are hiding in the trash.">
 <meta name="twitter:image" content="https://chillbaras.com/og.png">
 <link rel="canonical" href="https://chillbaras.com/">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #2a1a12; --cream: #fffaf0; --paper: #fff; --muted: #7a6a5a;
-    --yuzu: #ffb703; --mint: #a8e6cf; --sky: #9ad1f5; --peach: #ffd3b6;
-    --legendary: linear-gradient(90deg, #ff8a00, #e52e71);
-    --epic: #9b5de5; --rare: #4d96ff; --uncommon: #3aa66a; --common: #9a8a7a;
+    --bg: #15111c; --panel: #211a2b; --panel2: #2a2136; --ink: #f4efe6; --muted: #a99fb6;
+    --neon: #9dff6a; --pink: #ff4fd8; --cyan: #4ff0ff; --amber: #ffb43d; --red: #ff4d4d;
+    --legendary: linear-gradient(90deg, #ff8a00, #e52e71); --epic: #9b5de5; --rare: #4d96ff; --uncommon: #3aa66a; --common: #6b6475;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--cream); color: var(--ink); font-family: Fredoka, system-ui, sans-serif; font-size: 18px; line-height: 1.5; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: Rubik, system-ui, sans-serif; font-size: 18px; line-height: 1.5;
+    background-image: radial-gradient(circle at 15% 10%, rgba(255,79,216,.12), transparent 40%), radial-gradient(circle at 85% 30%, rgba(79,240,255,.10), transparent 40%); }
   a { color: inherit; }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
-  .box { background: var(--paper); border: 4px solid var(--ink); border-radius: 24px; box-shadow: 6px 6px 0 var(--ink); }
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 700 20px Fredoka, sans-serif; padding: 14px 26px; border: 4px solid var(--ink); border-radius: 999px; background: var(--yuzu); color: var(--ink); cursor: pointer; box-shadow: 4px 4px 0 var(--ink); transition: transform .1s, box-shadow .1s; text-decoration: none; }
-  .btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
-  .btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
-  .btn:disabled { opacity: .55; cursor: not-allowed; transform: none; }
-  .btn.ghost { background: var(--paper); }
+  .marker { font-family: 'Permanent Marker', cursive; letter-spacing: .01em; font-weight: 400; }
+  .box { background: var(--panel); border: 2px solid #3a2f48; border-radius: 20px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 800 18px Rubik, sans-serif; padding: 14px 24px;
+    border: 0; border-radius: 999px; background: var(--neon); color: #10200a; cursor: pointer; text-decoration: none;
+    box-shadow: 0 0 0 3px #15111c, 0 0 24px rgba(157,255,106,.45); transition: transform .1s, box-shadow .1s; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 0 0 3px #15111c, 0 0 34px rgba(157,255,106,.7); }
+  .btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+  .btn.pink { background: var(--pink); color: #2a0622; box-shadow: 0 0 0 3px #15111c, 0 0 24px rgba(255,79,216,.45); }
+  .btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px #4a3d5c; }
 
   nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
-  .logo { font-weight: 700; font-size: 28px; display: flex; align-items: center; gap: 10px; }
-  .logo img { width: 48px; height: 48px; border-radius: 14px; border: 3px solid var(--ink); }
-  nav .links { display: flex; gap: 20px; font-weight: 600; }
-  nav .links a { text-decoration: none; }
+  .logo { font-size: 30px; display: flex; align-items: center; gap: 10px; color: var(--neon); text-shadow: 0 0 18px rgba(157,255,106,.5); }
+  .logo img { width: 46px; height: 46px; border-radius: 12px; }
+  nav .links { display: flex; gap: 22px; font-weight: 600; color: var(--muted); }
+  nav .links a { text-decoration: none; } nav .links a:hover { color: var(--ink); }
 
-  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding: 32px 0 64px; }
-  h1 { font-size: clamp(44px, 7vw, 84px); line-height: 1; margin: 0 0 18px; }
-  h1 .y { color: var(--yuzu); -webkit-text-stroke: 3px var(--ink); paint-order: stroke fill; }
-  .lede { font-size: 22px; color: var(--muted); margin: 0 0 28px; max-width: 32ch; }
-  .portrait { position: relative; aspect-ratio: 1; overflow: hidden; padding: 0; }
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding: 28px 0 56px; }
+  h1 { font-size: clamp(52px, 8vw, 96px); line-height: .95; margin: 0 0 16px; }
+  h1 .n { color: var(--neon); text-shadow: 0 0 26px rgba(157,255,106,.55); }
+  .lede { font-size: 21px; color: var(--muted); margin: 0 0 26px; max-width: 34ch; }
+  .portrait { position: relative; aspect-ratio: 1; overflow: hidden; border-radius: 24px; border: 2px solid #3a2f48; box-shadow: 0 0 60px rgba(255,79,216,.18); }
   .portrait img { width: 100%; height: 100%; display: block; transition: opacity .4s; }
   .portrait .tag { position: absolute; left: 14px; bottom: 14px; }
 
-  .mint { padding: 24px; margin-top: 8px; }
-  .mint-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-  .qty { display: flex; align-items: center; border: 4px solid var(--ink); border-radius: 999px; overflow: hidden; }
-  .qty button { width: 48px; height: 52px; border: 0; background: var(--paper); font: 700 24px Fredoka; cursor: pointer; color: var(--ink); }
-  .qty span { width: 40px; text-align: center; font-weight: 700; font-size: 22px; }
-  .bar { height: 18px; border: 3px solid var(--ink); border-radius: 999px; overflow: hidden; margin: 16px 0 6px; background: var(--paper); }
-  .bar div { height: 100%; width: 0; background: var(--mint); border-right: 3px solid var(--ink); transition: width .6s; }
-  .status { font-size: 16px; color: var(--muted); min-height: 24px; margin-top: 10px; overflow-wrap: anywhere; }
+  .panel { padding: 22px; }
+  .row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .qty { display: flex; align-items: center; background: var(--panel2); border-radius: 999px; overflow: hidden; }
+  .qty button { width: 46px; height: 50px; border: 0; background: transparent; color: var(--ink); font: 800 22px Rubik; cursor: pointer; }
+  .qty span { width: 36px; text-align: center; font-weight: 800; font-size: 20px; }
+  .bar { height: 12px; border-radius: 999px; background: var(--panel2); overflow: hidden; margin: 16px 0 6px; }
+  .bar div { height: 100%; width: 0; background: linear-gradient(90deg, var(--neon), var(--cyan)); transition: width .6s; }
+  .meta { display: flex; justify-content: space-between; font-weight: 600; font-size: 15px; color: var(--muted); gap: 10px; flex-wrap: wrap; }
+  .status { font-size: 15px; color: var(--muted); min-height: 22px; margin-top: 10px; overflow-wrap: anywhere; }
+  input.id { width: 150px; height: 50px; border-radius: 999px; border: 0; background: var(--panel2); color: var(--ink); font: 800 18px Rubik; padding: 0 20px; }
 
-  section { padding: 64px 0; }
-  h2 { font-size: clamp(34px, 5vw, 52px); margin: 0 0 8px; }
-  .sub { color: var(--muted); margin: 0 0 32px; }
-  .tag { display: inline-block; font-weight: 700; font-size: 14px; color: #fff; padding: 3px 12px; border-radius: 999px; border: 3px solid var(--ink); background: var(--common); }
+  section { padding: 60px 0; }
+  h2 { font-size: clamp(36px, 5vw, 56px); margin: 0 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 30px; max-width: 64ch; }
+  .tag { display: inline-block; font-weight: 800; font-size: 13px; color: #fff; padding: 4px 12px; border-radius: 999px; background: var(--common); }
   .tag.Legendary { background: var(--legendary); } .tag.Epic { background: var(--epic); } .tag.Rare { background: var(--rare); } .tag.Uncommon { background: var(--uncommon); }
 
-  .tiers { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
-  .tier { padding: 20px; text-align: center; }
-  .tier b { display: block; font-size: 36px; margin-top: 8px; }
-  .tier small { color: var(--muted); }
+  .phases { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: stretch; }
+  .phase { padding: 26px; }
+  .phase h3 { font-size: 34px; margin: 0 0 4px; }
+  .phase.tired h3 { color: var(--cyan); } .phase.awake h3 { color: var(--amber); }
+  .phase p { color: var(--muted); margin: 6px 0 0; }
+  .arrow { display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--pink); font-size: 22px; text-align: center; }
+  .arrow b { font-size: 64px; line-height: 1; text-shadow: 0 0 20px rgba(255,79,216,.6); }
 
-  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
-  .card { overflow: hidden; padding: 0; }
-  .card img { width: 100%; display: block; aspect-ratio: 1; border-bottom: 4px solid var(--ink); }
-  .card div { padding: 12px 14px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-  .card div span { color: var(--muted); font-weight: 400; font-size: 15px; }
-  .marquee { overflow: hidden; border-block: 4px solid var(--ink); background: var(--mint); padding: 18px 0; }
-  .marquee .track { display: flex; gap: 18px; width: max-content; animation: slide 60s linear infinite; }
-  .marquee img { width: 150px; height: 150px; border-radius: 18px; border: 4px solid var(--ink); }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .steps .box { padding: 22px; }
+  .steps .n { font-size: 46px; color: var(--neon); }
+  .tiers { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 14px; }
+  .tier { padding: 16px; text-align: center; } .tier b { display: block; font-size: 30px; margin-top: 6px; } .tier small { color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 18px; }
+  .card { overflow: hidden; }
+  .card img, .card .mystery { width: 100%; display: block; aspect-ratio: 1; }
+  .card .mystery { display: grid; place-items: center; background: repeating-linear-gradient(45deg, #2a2136, #2a2136 14px, #241c2f 14px, #241c2f 28px); font-size: 80px; color: var(--amber); text-shadow: 0 0 24px rgba(255,180,61,.6); }
+  .card div.cap { padding: 12px 14px; font-weight: 600; display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+  .card div.cap span { color: var(--muted); font-weight: 400; font-size: 14px; }
+  .strip { overflow: hidden; border-block: 2px solid #3a2f48; background: #1b1523; padding: 18px 0; }
+  .strip .track { display: flex; gap: 16px; width: max-content; animation: slide 70s linear infinite; }
+  .strip img { width: 150px; height: 150px; border-radius: 16px; }
   @keyframes slide { to { transform: translateX(-50%); } }
-  @media (prefers-reduced-motion: reduce) { .marquee .track { animation: none; } }
-
-  .traits { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
-  .traits .box { padding: 18px 20px; }
-  .traits h3 { margin: 0 0 6px; }
-  .traits p { margin: 0; color: var(--muted); font-size: 16px; }
-
-  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .steps .box { padding: 24px; }
-  .steps .n { font-size: 44px; font-weight: 700; color: var(--yuzu); -webkit-text-stroke: 2px var(--ink); }
-  details { padding: 18px 22px; margin-bottom: 14px; }
-  summary { font-weight: 700; cursor: pointer; }
-  details p { color: var(--muted); margin: 10px 0 0; }
+  @media (prefers-reduced-motion: reduce) { .strip .track { animation: none; } }
+  details { padding: 18px 22px; margin-bottom: 12px; }
+  summary { font-weight: 800; cursor: pointer; } details p { color: var(--muted); margin: 10px 0 0; }
   footer { padding: 40px 0 60px; text-align: center; color: var(--muted); }
-
   @media (max-width: 860px) {
-    .hero { grid-template-columns: 1fr; }
-    .tiers { grid-template-columns: repeat(2, 1fr); }
-    .steps { grid-template-columns: 1fr; }
-    nav .links { display: none; }
+    .hero, .phases { grid-template-columns: 1fr; } .arrow { flex-direction: row; gap: 12px; } .arrow b { transform: rotate(90deg); }
+    .tiers { grid-template-columns: repeat(2, 1fr); } .steps { grid-template-columns: 1fr; } nav .links { display: none; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
   <nav>
-    <div class="logo"><img id="logoImg" src="build/images/p6.svg" alt="">Chonk Bots</div>
-    <div class="links"><a href="#rarity">Rarity</a><a href="#legendaries">Legendaries</a><a href="#traits">Traits</a><a href="#faq">FAQ</a></div>
-    <a class="btn ghost" id="connectTop" href="#mint">Mint</a>
+    <div class="logo marker"><img id="logoImg" src="build/images/p8.svg" alt="">Trash Gang</div>
+    <div class="links"><a href="#how">How it works</a><a href="#wake">Wake up</a><a href="#legendaries">Legendaries</a><a href="#faq">FAQ</a></div>
+    <a class="btn ghost" href="#mint">Mint</a>
   </nav>
 
   <header class="hero" id="mint">
     <div>
-      <h1>Beep boop.<br>Be a <span class="y">Chonk Bot.</span></h1>
-      <p class="lede">7,999 chunky little robots who refuse to panic. 10 one-of-one legendaries. Minting on Ethereum.</p>
-      <div class="box mint">
-        <div class="mint-row">
+      <h1 class="marker">So tired.<br><span class="n">Trash Gang.</span></h1>
+      <p class="lede">4,000 raccoons running on zero sleep. Burn one to wake it up, and maybe find one of the two Legendaries hiding in the trash.</p>
+      <div class="box panel">
+        <div class="row">
           <div class="qty"><button id="minus" aria-label="Less">−</button><span id="qty">1</span><button id="plus" aria-label="More">+</button></div>
           <button class="btn" id="mintBtn">Connect wallet</button>
         </div>
         <div class="bar"><div id="bar"></div></div>
-        <div style="display:flex;justify-content:space-between;font-weight:600"><span id="minted">— / 7,999 minted</span><span id="price">Price TBA · max 3 per wallet</span></div>
+        <div class="meta"><span id="minted">— / 4,000 tired minted</span><span id="price">Price TBA · max 3 per wallet</span></div>
         <div class="status" id="status"></div>
       </div>
     </div>
-    <div class="box portrait"><img id="heroImg" src="build/images/p6.svg" alt="A Chonk Bot"><span class="tag Legendary" id="heroTag">Legendary · The Golden One</span></div>
+    <div class="portrait"><img id="heroImg" src="build/images/p3.svg" alt="A Trash Gang raccoon"><span class="tag Legendary" id="heroTag">Legendary · Full Coma</span></div>
   </header>
 </div>
 
-<div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
+<div class="strip" aria-hidden="true"><div class="track" id="track"></div></div>
 
 <div class="wrap">
-  <section id="rarity">
-    <h2>Not all bots are equal</h2>
-    <p class="sub">Every Chonk Bot gets a rarity tier based on how rare its traits are. Tiers show on OpenSea and every marketplace.</p>
-    <div class="tiers" id="tiers"></div>
+  <section id="how">
+    <h2 class="marker">Tired → Awake</h2>
+    <p class="sub">Every Trash Gang raccoon starts exhausted. When you're ready, burn yours to wake it up. You get a random raccoon from the Awake pool, and the tired one is gone forever.</p>
+    <div class="phases">
+      <div class="box phase tired"><h3 class="marker">Tired</h3><b id="tiredCount">4,000</b> raccoons · mint now
+        <p>Sleepy, exhausted and burnt out. Eye bags, coffee, pajamas, bed hair, Monday energy. 8 Tired Legendaries.</p></div>
+      <div class="arrow"><b>➜</b>burn to<br>wake up</div>
+      <div class="box phase awake"><h3 class="marker">Awake</h3><b id="awakeCount">3,999</b> raccoons · only by burning
+        <p>Happy, laughing, mad, hyped and in love: a whole new raccoon. <b>2 Awake Legendaries</b> are hidden in the pool.</p></div>
+    </div>
   </section>
 
-  <section id="legendaries">
-    <h2>The 10 Legendaries</h2>
-    <p class="sub">One of one each. Their paint jobs, hats and worlds exist nowhere else in the collection. Nine are hidden at random in the mint, and you won't know if you got one until you open your wallet. #1, The Headliner, is the creator's own.</p>
-    <div class="legend-grid" id="legendGrid"></div>
-  </section>
-
-  <section id="traits">
-    <h2>What makes one rare</h2>
-    <p class="sub">10 traits, more than 100 options, all drawn by hand in code.</p>
-    <div class="traits">
-      <div class="box"><h3>Aura</h3><p>Only 1 in 5 has one. Sun Rays is the rarest: about 2%.</p></div>
-      <div class="box"><h3>Companion</h3><p>About a third bring a friend: a duckling, bluebird, butterfly, snail, turtle or the rare Mini Bot (only 231).</p></div>
-      <div class="box"><h3>Accessory</h3><p>Gold hoops, headphones, rivets, duct tape, cracked visors, heart stickers, bolt decals and the rare Scope.</p></div>
-      <div class="box"><h3>Paint</h3><p>Silver, Mint, Sky, Peach, Lemon and more are common. Rose Gold, Chrome and Gold (only 86) are rare. Diamond, Ghost, Rainbow, Shadow and Rusty are 1/1 only.</p></div>
-      <div class="box"><h3>Headwear</h3><p>Light bulbs, beanies, caps, a frog friend. Crown and Halo are rare, and the Traffic Light appears only 76 times. No hat? You get an antenna.</p></div>
-      <div class="box"><h3>Eyes</h3><p>15 glowing LED expressions on the visor: dots, sleepy, hearts, pixel, X X and more, in 8 eye colors. Scanner, Laser and Loading are the rarest.</p></div>
-      <div class="box"><h3>Background</h3><p>Clouds, dots, stripes, checkers, waves and hearts, plus rare Sakura, Hot Spring and Night.</p></div>
-      <div class="box"><h3>Clothes &amp; Mouth</h3><p>Hoodies, Hawaiian shirts, gold chains and robes. LED smiles, waves, pixel grins, speaker grills and zigzags.</p></div>
+  <section id="wake">
+    <h2 class="marker">Wake one up</h2>
+    <p class="sub">Enter the number of a Tired raccoon you own. It gets burned, and you receive a random Awake raccoon in the same transaction. This can't be undone.</p>
+    <div class="box panel">
+      <div class="row">
+        <input class="id" id="wakeId" type="number" min="1" max="4000" placeholder="Token #">
+        <button class="btn pink" id="wakeBtn">Wake up</button>
+      </div>
+      <div class="bar"><div id="wakeBar"></div></div>
+      <div class="meta"><span id="woke">— / 3,999 awake</span><span id="burned">— burned</span></div>
+      <div class="status" id="wakeStatus"></div>
     </div>
   </section>
 
   <section>
-    <h2>How it works</h2>
+    <h2 class="marker">How it works</h2>
     <div class="steps">
-      <div class="box"><div class="n">1</div><h3>Mint</h3><p>Connect your Ethereum wallet and mint up to 3. You pay the mint price (if any) plus Ethereum network gas.</p></div>
-      <div class="box"><div class="n">2</div><h3>Reveal</h3><p>Your Chonk Bots appear in your wallet and on OpenSea, each with its tier and traits.</p></div>
-      <div class="box"><div class="n">3</div><h3>Join the Workshop</h3><p>Holders get the Discord role, early access to drops and a vote on what comes next.</p></div>
+      <div class="box"><div class="n marker">1</div><h3>Mint a Tired raccoon</h3><p>Connect your Ethereum wallet and mint up to 3. You pay the mint price (if any) plus network gas.</p></div>
+      <div class="box"><div class="n marker">2</div><h3>Keep it or wake it</h3><p>Hold your tired raccoon, or burn it any time after waking opens to get a random Awake one.</p></div>
+      <div class="box"><div class="n marker">3</div><h3>Join the Gang</h3><p>Holders get the Discord role, early access to drops and a vote on what comes next.</p></div>
     </div>
   </section>
 
+  <section id="rarity">
+    <h2 class="marker">Not all trash is equal</h2>
+    <p class="sub">Each phase has its own rarity tiers. They show on OpenSea and every marketplace.</p>
+    <h3 style="color:var(--cyan)">Tired</h3><div class="tiers" id="tiersTired"></div>
+    <h3 style="color:var(--amber)">Awake</h3><div class="tiers" id="tiersAwake"></div>
+  </section>
+
+  <section id="legendaries">
+    <h2 class="marker">The 10 Legendaries</h2>
+    <p class="sub">One of one each. Eight are Tired and hidden at random in the mint. Two are Awake, and the only way to find them is to wake raccoons up. #1, The Headliner, is the creator's own.</p>
+    <div class="grid" id="legendGrid"></div>
+  </section>
+
   <section id="faq">
-    <h2>FAQ</h2>
-    <details class="box"><summary>Which network?</summary><p>Ethereum mainnet. You'll need ETH in your wallet for gas. Every Chonk Bot lives on Ethereum forever.</p></details>
-    <details class="box"><summary>How are tiers decided?</summary><p>Each trait's rarity adds to a score. The 10 one-of-ones are Legendary. Then the top 3% are Epic, the next 10% Rare, the next 25% Uncommon, and the rest Common.</p></details>
-    <details class="box"><summary>Can the art change after mint?</summary><p>No. Once mint is over, the metadata is locked on-chain forever.</p></details>
-    <details class="box"><summary>Royalties?</summary><p>5% on secondary sales, which funds the community and future drops.</p></details>
+    <h2 class="marker">FAQ</h2>
+    <details class="box"><summary>What happens when I wake a raccoon up?</summary><p>Your Tired raccoon is burned (destroyed for good) and you get a random raccoon from the Awake pool in the same transaction. Every Awake raccoon is unique, and once it's claimed it's gone from the pool.</p></details>
+    <details class="box"><summary>Do I have to wake mine up?</summary><p>No. Tired raccoons are a full collection on their own. Every wake-up makes Tired ones scarcer.</p></details>
+    <details class="box"><summary>Which network?</summary><p>Ethereum mainnet. You'll need ETH for gas.</p></details>
+    <details class="box"><summary>How are tiers decided?</summary><p>Rarity is scored within each phase. The 1/1s are Legendary, then the top 3% are Epic, the next 10% Rare, the next 25% Uncommon, and the rest Common.</p></details>
+    <details class="box"><summary>Can the art change after mint?</summary><p>The contract has a one-way metadata lock. Once it's used, the art and traits can never be changed.</p></details>
+    <details class="box"><summary>Royalties?</summary><p>5% on secondary sales.</p></details>
   </section>
 </div>
 
-<footer>Chonk Bots · beep boop, stay calm.</footer>
+<footer class="marker">Trash Gang · go to sleep.</footer>
 
 <script src="build/featured.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
@@ -192,74 +207,78 @@ const CHAIN_PARAMS = {
 };
 const ABI = [
   'function mint(uint256 quantity) payable',
-  'function totalSupply() view returns (uint256)',
+  'function wakeUp(uint256 tiredId) returns (uint256)',
   'function price() view returns (uint256)',
   'function mintOpen() view returns (bool)',
-  'function mintedBy(address) view returns (uint256)',
+  'function wakeOpen() view returns (bool)',
+  'function tiredMinted() view returns (uint256)',
+  'function awakeMinted() view returns (uint256)',
+  'function burned() view returns (uint256)',
+  'function ownerOf(uint256) view returns (address)',
+  'event WokeUp(address indexed owner, uint256 indexed tiredId, uint256 indexed awakeId)',
 ];
-const MAX_SUPPLY = 7999, MAX_PER_WALLET = 3;
+const TIRED = 4000, AWAKE = 3999, MAX_PER_WALLET = 3;
+const WAKE_GAS = 400000n; // the random draw makes gas vary a little, so send a buffer
 // =========================================================
 
-const C = window.COLLECTION || { tierCounts: {}, legendaries: [], featured: [] };
+const C = window.COLLECTION || { tierCounts: { tired: {}, awake: {} }, legendaries: [], featured: [], ext: 'svg' };
 const $ = (id) => document.getElementById(id);
-const img = (id) => `build/images/${id}.svg`;
+const img = (id) => `build/images/${id}.${C.ext || 'svg'}`;
+const fmt = (n) => Number(n).toLocaleString();
 
-// tiers
+// tiers per phase
 const order = ['Legendary', 'Epic', 'Rare', 'Uncommon', 'Common'];
-$('tiers').innerHTML = order.map((t) => {
-  const n = C.tierCounts[t] || 0;
-  return `<div class="box tier"><span class="tag ${t}">${t}</span><b>${n.toLocaleString()}</b><small>${((n / MAX_SUPPLY) * 100).toFixed(1)}% of supply</small></div>`;
-}).join('');
+for (const [phase, el, N] of [['tired', 'tiersTired', TIRED], ['awake', 'tiersAwake', AWAKE]])
+  $(el).innerHTML = order.map((t) => { const n = (C.tierCounts[phase] || {})[t] || 0; return `<div class="box tier"><span class="tag ${t}">${t}</span><b>${fmt(n)}</b><small>${((n / N) * 100).toFixed(1)}%</small></div>`; }).join('');
 
-// legendaries
-$('legendGrid').innerHTML = C.legendaries.map((l) =>
-  `<div class="box card"><img src="${img(l.id)}" alt="${l.title}" loading="lazy"><div>${l.title}<span>1/1</span></div></div>`).join('');
+// legendaries: Awake ones stay a mystery
+$('legendGrid').innerHTML = C.legendaries.map((l) => l.phase === 'awake'
+  ? `<div class="box card"><div class="mystery marker">?</div><div class="cap">Awake Legendary<span>hidden</span></div></div>`
+  : `<div class="box card"><img src="${img(l.id)}" alt="${l.title}" loading="lazy"><div class="cap">${l.title}<span>1/1</span></div></div>`).join('');
 
-// marquee (duplicated for a seamless loop)
-const strip = [...C.featured, ...C.legendaries.map((l) => l.id)];
+// moving strip
+const strip = [...C.featured, ...C.legendaries.filter((l) => l.phase !== 'awake').map((l) => l.id)];
 $('track').innerHTML = [...strip, ...strip].map((id) => `<img src="${img(id)}" alt="" loading="lazy">`).join('');
 
-// hero rotates through legendaries
-const golden = C.legendaries.find((l) => l.title === 'The Golden One'), onsen = C.legendaries.find((l) => l.title === 'Hot Tub Bot');
-if (golden) $('heroImg').src = img(golden.id);
-if (onsen) $('logoImg').src = img(onsen.id);
-let hi = Math.max(0, C.legendaries.indexOf(golden));
+// hero rotates through the Tired Legendaries
+const showcase = C.legendaries.filter((l) => l.phase !== 'awake');
+const king = showcase.find((l) => l.title === 'Trash King');
+if (king) $('logoImg').src = img(king.id);
+let hi = Math.max(0, showcase.findIndex((l) => l.title === 'Full Coma'));
+if (showcase[hi]) { $('heroImg').src = img(showcase[hi].id); $('heroTag').textContent = `Legendary · ${showcase[hi].title}`; }
 setInterval(() => {
-  if (!C.legendaries.length) return;
-  hi = (hi + 1) % C.legendaries.length;
-  const l = C.legendaries[hi];
+  if (!showcase.length) return;
+  hi = (hi + 1) % showcase.length;
+  const l = showcase[hi];
   $('heroImg').style.opacity = 0;
   setTimeout(() => { $('heroImg').src = img(l.id); $('heroTag').textContent = `Legendary · ${l.title}`; $('heroImg').style.opacity = 1; }, 400);
 }, 3500);
 
-// mint
+// ---------- chain ----------
 let qty = 1, signer = null, contract = null, price = 0n;
-const setQty = (n) => { qty = Math.max(1, Math.min(MAX_PER_WALLET, n)); $('qty').textContent = qty; };
+const setQty = (n) => { qty = Math.max(1, Math.min(MAX_PER_WALLET, n)); $('qty').textContent = qty; if (signer) $('mintBtn').textContent = `Mint ${qty}`; };
 $('minus').onclick = () => setQty(qty - 1);
 $('plus').onclick = () => setQty(qty + 1);
-const status = (m) => ($('status').textContent = m);
 const configured = !/^0x0+$/.test(CONTRACT_ADDRESS);
 
-async function refresh(readContract) {
+async function refresh(c) {
   try {
-    const [supply, p] = await Promise.all([readContract.totalSupply(), readContract.price()]);
+    const [t, a, b, p] = await Promise.all([c.tiredMinted(), c.awakeMinted(), c.burned(), c.price()]);
     price = p;
-    $('minted').textContent = `${Number(supply).toLocaleString()} / ${MAX_SUPPLY.toLocaleString()} minted`;
-    $('bar').style.width = `${(Number(supply) / MAX_SUPPLY) * 100}%`;
+    $('minted').textContent = `${fmt(t)} / ${fmt(TIRED)} tired minted`; $('bar').style.width = `${(Number(t) / TIRED) * 100}%`;
+    $('woke').textContent = `${fmt(a)} / ${fmt(AWAKE)} awake`; $('wakeBar').style.width = `${(Number(a) / AWAKE) * 100}%`;
+    $('burned').textContent = `${fmt(b)} burned`;
+    $('tiredCount').textContent = fmt(Number(t) - Number(b)); $('awakeCount').textContent = fmt(a);
     $('price').textContent = (p === 0n ? 'Free' : `${ethers.formatEther(p)} ETH`) + ` · max ${MAX_PER_WALLET} per wallet`;
   } catch (e) { /* not deployed yet */ }
 }
-if (configured) {
-  const rpc = CHAIN_PARAMS[CHAIN_ID].rpcUrls[0];
-  refresh(new ethers.Contract(CONTRACT_ADDRESS, ABI, new ethers.JsonRpcProvider(rpc)));
-}
+if (configured) refresh(new ethers.Contract(CONTRACT_ADDRESS, ABI, new ethers.JsonRpcProvider(CHAIN_PARAMS[CHAIN_ID].rpcUrls[0])));
 
-async function connect() {
-  if (!window.ethereum) { status('No wallet found. Install MetaMask, Rainbow or Coinbase Wallet, then reload.'); return false; }
+async function connect(statusEl) {
+  if (!window.ethereum) { statusEl.textContent = 'No wallet found. Install MetaMask, Rainbow or Coinbase Wallet, then reload.'; return false; }
   const provider = new ethers.BrowserProvider(window.ethereum);
   await provider.send('eth_requestAccounts', []);
-  const net = await provider.getNetwork();
-  if (Number(net.chainId) !== CHAIN_ID) {
+  if (Number((await provider.getNetwork()).chainId) !== CHAIN_ID) {
     try { await window.ethereum.request({ method: 'wallet_switchEthereumChain', params: [{ chainId: CHAIN_PARAMS[CHAIN_ID].chainId }] }); }
     catch (e) { await window.ethereum.request({ method: 'wallet_addEthereumChain', params: [CHAIN_PARAMS[CHAIN_ID]] }); }
   }
@@ -268,32 +287,52 @@ async function connect() {
   await refresh(contract);
   const addr = await signer.getAddress();
   $('mintBtn').textContent = `Mint ${qty}`;
-  status(`Connected: ${addr.slice(0, 6)}…${addr.slice(-4)}`);
+  statusEl.textContent = `Connected: ${addr.slice(0, 6)}…${addr.slice(-4)}`;
   return true;
 }
+const niceError = (e) => {
+  const m = e?.shortMessage || e?.reason || e?.message || 'Something went wrong';
+  if (/WalletLimit/.test(m)) return 'That would put you over 3 per wallet.';
+  if (/SoldOut/.test(m)) return 'All 4,000 tired raccoons are minted. Check OpenSea.';
+  if (/NotOwner/.test(m)) return "You don't own that raccoon.";
+  if (/NotTired/.test(m)) return 'Only Tired raccoons (#1–4,000) can be woken up.';
+  if (/PoolEmpty/.test(m)) return 'The Awake pool is empty. Every awake raccoon has been claimed.';
+  return m;
+};
 
 $('mintBtn').onclick = async () => {
-  if (!configured) { status('Mint opens soon. Follow us so you don’t miss it.'); return; }
+  const st = $('status');
+  if (!configured) { st.textContent = 'Mint opens soon. Follow us so you don’t miss it.'; return; }
   try {
-    if (!signer && !(await connect())) return;
-    if (!(await contract.mintOpen())) { status('Mint isn’t open yet.'); return; }
-    $('mintBtn').disabled = true;
-    status('Confirm in your wallet…');
+    if (!signer && !(await connect(st))) return;
+    if (!(await contract.mintOpen())) { st.textContent = 'Mint isn’t open yet.'; return; }
+    $('mintBtn').disabled = true; st.textContent = 'Confirm in your wallet…';
     const tx = await contract.mint(qty, { value: price * BigInt(qty) });
-    status('Minting… your bots are booting up.');
+    st.textContent = 'Minting… your raccoons are dragging themselves out of bed.';
     await tx.wait();
-    status(`Done! You minted ${qty} Chonk Bot${qty > 1 ? 's' : ''}. Check your wallet or OpenSea.`);
+    st.textContent = `Done! You minted ${qty} tired raccoon${qty > 1 ? 's' : ''}. Check your wallet or OpenSea.`;
     await refresh(contract);
-  } catch (e) {
-    const msg = e?.shortMessage || e?.reason || e?.message || 'Something went wrong';
-    status(/WalletLimit/.test(msg) ? 'That would put you over 3 per wallet.' : /SoldOut/.test(msg) ? 'Sold out! Check OpenSea.' : msg);
-  } finally {
-    $('mintBtn').disabled = false;
-    if (signer) $('mintBtn').textContent = `Mint ${qty}`;
-  }
+  } catch (e) { st.textContent = niceError(e); } finally { $('mintBtn').disabled = false; }
 };
-$('plus').addEventListener('click', () => signer && ($('mintBtn').textContent = `Mint ${qty}`));
-$('minus').addEventListener('click', () => signer && ($('mintBtn').textContent = `Mint ${qty}`));
+
+$('wakeBtn').onclick = async () => {
+  const st = $('wakeStatus'), id = parseInt($('wakeId').value, 10);
+  if (!configured) { st.textContent = 'Waking up opens after the mint. Follow us so you don’t miss it.'; return; }
+  if (!(id >= 1 && id <= TIRED)) { st.textContent = 'Enter the number of a Tired raccoon you own (1–4,000).'; return; }
+  try {
+    if (!signer && !(await connect(st))) return;
+    if (!(await contract.wakeOpen())) { st.textContent = 'Waking up isn’t open yet.'; return; }
+    if ((await contract.ownerOf(id)).toLowerCase() !== (await signer.getAddress()).toLowerCase()) { st.textContent = "You don't own that raccoon."; return; }
+    if (!confirm(`Burn tired raccoon #${id} to wake it up? This can't be undone.`)) return;
+    $('wakeBtn').disabled = true; st.textContent = 'Confirm in your wallet…';
+    const tx = await contract.wakeUp(id, { gasLimit: WAKE_GAS });
+    st.textContent = 'Waking up… brewing coffee.';
+    const rc = await tx.wait();
+    const ev = rc.logs.map((l) => { try { return contract.interface.parseLog(l); } catch { return null; } }).find((x) => x && x.name === 'WokeUp');
+    st.textContent = ev ? `It's awake! You got raccoon #${ev.args.awakeId}. Check it on OpenSea.` : 'Done! Check your wallet.';
+    await refresh(contract);
+  } catch (e) { st.textContent = niceError(e); } finally { $('wakeBtn').disabled = false; }
+};
 </script>
 </body>
 </html>
